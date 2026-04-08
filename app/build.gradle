@@ -4,12 +4,12 @@ plugins {
 
 android {
     namespace 'aenu.ax360e'
-    compileSdk 35
+    compileSdk 36
 
     defaultConfig {
         applicationId "aenu.ax360e.free"
         minSdk 28
-        targetSdk 35
+        targetSdk 36
         versionCode 14
         versionName "0.14"
 
@@ -38,8 +38,8 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_11
-        targetCompatibility JavaVersion.VERSION_11
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
     }
 
     externalNativeBuild {
@@ -56,11 +56,11 @@ android {
     }
 }
 
-dependencies {
+dependencies {/*
 implementation("com.google.android.gms:play-services-ads-api:24.6.0")
 implementation("com.google.android.gms:play-services-ads:24.6.0")
 implementation("com.google.android.ump:user-messaging-platform:2.1.0")
-
+*/
     implementation libs.appcompat
     implementation libs.material
     implementation libs.activity
