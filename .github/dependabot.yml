@@ -11,7 +11,7 @@ updates:
       interval: "daily"
     target-branch: "debug"
   - package-ecosystem: "gradle" # See documentation for possible values
-    directory: "/gradle" # Location of package manifests
+    directory: "gradle" # Location of package manifests
     schedule:
       interval: "daily"
     target-branch: "debug"
@@ -21,7 +21,7 @@ updates:
       interval: "daily"   
     target-branch: "debug"
   - package-ecosystem: "gradle" # See documentation for possible values
-    directory: "/app" # Location of package manifests
+    directory: "app" # Location of package manifests
     schedule:
       interval: "daily"
     target-branch: "debug"
