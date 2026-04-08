@@ -165,7 +165,7 @@ public class MainActivity extends AppCompatActivity {
         File config_file=new File(Application.get_app_data_dir(),"xenia.config.xml");
         Utils.save_string(config_file,config_str);*/
     }
-
+/*
     void on_create(){com.google.android.gms.ads.MobileAds.initialize(this, initializationStatus -> {
 final AppOpenAdManager app_open_ad_manager=AppOpenAdManager.getInstance(this);
 app_open_ad_manager.loadAd(this, new AppOpenAdManager.OnLoadAdCompleteListener() {
@@ -176,7 +176,7 @@ app_open_ad_manager.showAdIfAvailable( MainActivity.this, new AppOpenAdManager.O
 public void onShowAdComplete() {
 _on_create();
 }});}});});}
-
+*/
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
