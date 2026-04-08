@@ -166,7 +166,7 @@ public class MainActivity extends AppCompatActivity {
         Utils.save_string(config_file,config_str);*/
 //    }
 /*
-    void on_create(){com.google.android.gms.ads.MobileAds.initialize(this, initializationStatus -> {
+    void _on_create(){com.google.android.gms.ads.MobileAds.initialize(this, initializationStatus -> {
 final AppOpenAdManager app_open_ad_manager=AppOpenAdManager.getInstance(this);
 app_open_ad_manager.loadAd(this, new AppOpenAdManager.OnLoadAdCompleteListener() {
 @Override
@@ -212,7 +212,8 @@ _on_create();
 
     @Override
     protected void onStart() {super.onStart();
-//AppOpenAdManager.getInstance(this).showAdIfAvailable( this);}
+//AppOpenAdManager.getInstance(this).showAdIfAvailable( this);
+}
 
     @Override
     protected void onDestroy() {
