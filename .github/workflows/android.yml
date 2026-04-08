@@ -11,9 +11,11 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/debug'
+#    if: github.ref == 'refs/heads/debug'
     steps:
     - uses: actions/checkout@v6
+      with:
+        ref: debug
     - name: set up JDK 
       uses: actions/setup-java@v5
       with:
