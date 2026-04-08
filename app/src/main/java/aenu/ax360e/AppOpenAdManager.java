@@ -39,9 +39,9 @@ import com.google.android.ump.UserMessagingPlatform;
 import java.util.Date;
 
 /** Application class that initializes, loads and show ads when activities change states. */
-// [START application_class]
-public class AppOpenAdManager {
-
+// [START application_class]/*
+public class AppOpenAdManager {*/
+/*
     private static final String LOG_TAG = "AppOpenAdManager";
     private final String AD_UNIT_ID="ca-app-pub-5412294626339113/8042966570";
 
