@@ -11,17 +11,41 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-
+    if: github.ref == 'refs/heads/debug'
     steps:
     - uses: actions/checkout@v6
     - name: set up JDK 
       uses: actions/setup-java@v5
       with:
-        java-version: '24'
+        java-version: '25'
         distribution: 'temurin'
         cache: gradle
-
+    - name: Setup Gradle
+      uses: gradle/actions/setup-gradle@v4
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
     - name: Build with Gradle
       run: ./gradlew assembleDebug
+    - name: Prepare Artifacts with Timestamp
+      run: |
+        # 获取当前时间（北京时间/东八区）
+        TIMESTAMP=$(date +'%Y%m%d_%H%M%S')
+        # 重命名 APK，防止上传到 Release 时文件名冲突导致覆盖
+        mkdir -p release_assets
+        cp app/build/outputs/apk/debug/app-debug.apk release_assets/ax360e-debug-$TIMESTAMP.apk
+        echo "APK_PATH=release_assets/ax360e-debug-$TIMESTAMP.apk" >> $GITHUB_ENV
+
+    - name: Upload to Release
+      uses: softprops/action-gh-release@v2
+      with:
+        # 发布的 Tag 名称，建议使用固定 Tag 或根据日期生成
+        tag_name: debug-builds
+        name: "Debug Builds History"
+        body: "这是自动构建的 Debug 历史版本。所有文件均按时间戳保存，不会互相覆盖。"
+        files: release_assets/*.apk
+        # 关键设置：设为 true 表示这是预发布版
+        prerelease: true
+        # 关键设置：如果 Tag 已存在，则在原 Release 上追加文件而非删除重建
+        append_body: true
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
