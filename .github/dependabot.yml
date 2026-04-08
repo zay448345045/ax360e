@@ -16,7 +16,7 @@ updates:
       interval: "daily"
     target-branch: "debug"
   - package-ecosystem: "gradle" # See documentation for possible values
-    directory: "/gradle/wrapper" # Location of package manifests
+    directory: "gradle/wrapper" # Location of package manifests
     schedule:
       interval: "daily"   
     target-branch: "debug"
@@ -26,6 +26,6 @@ updates:
       interval: "daily"
     target-branch: "debug"
   - package-ecosystem: "github-actions" # See documentation for possible values
-    directory: "/.github/workflows" # Location of package manifests
+    directory: ".github/workflows" # Location of package manifests
     schedule:
       interval: "daily"
