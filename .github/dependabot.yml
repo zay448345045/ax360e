@@ -11,12 +11,12 @@ updates:
       interval: "daily"
     target-branch: "debug"
   - package-ecosystem: "gradle" # See documentation for possible values
-    directory: "/gardle" # Location of package manifests
+    directory: "/gradle" # Location of package manifests
     schedule:
       interval: "daily"
     target-branch: "debug"
   - package-ecosystem: "gradle" # See documentation for possible values
-    directory: "/gardle/wrapper" # Location of package manifests
+    directory: "/gradle/wrapper" # Location of package manifests
     schedule:
       interval: "daily"   
     target-branch: "debug"
