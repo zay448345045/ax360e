@@ -212,7 +212,7 @@ _on_create();
 
     @Override
     protected void onStart() {super.onStart();
-AppOpenAdManager.getInstance(this).showAdIfAvailable( this);}
+//AppOpenAdManager.getInstance(this).showAdIfAvailable( this);}
 
     @Override
     protected void onDestroy() {
