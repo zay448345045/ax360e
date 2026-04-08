@@ -61,7 +61,7 @@ implementation("com.google.android.gms:play-services-ads-api:25.1.0")
 implementation("com.google.android.gms:play-services-ads:25.1.0")
 implementation("com.google.android.ump:user-messaging-platform:4.0.0")
 */
-implementation ("androidx.documentfile:documentfile:1.0.1")
+implementation ("androidx.documentfile:documentfile:1.1.0")
     implementation libs.appcompat
     implementation libs.material
     implementation libs.activity
