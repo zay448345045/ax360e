@@ -41,7 +41,7 @@ jobs:
         echo "APK_PATH=release_assets/ax360e-debug-$TIMESTAMP.apk" >> $GITHUB_ENV
 
     - name: Upload to Release
-      uses: softprops/action-gh-release@v2
+      uses: softprops/action-gh-release@v3
       with:
         # 发布的 Tag 名称，建议使用固定 Tag 或根据日期生成
         tag_name: debug-builds
